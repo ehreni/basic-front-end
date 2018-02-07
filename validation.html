@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Form Registrasi</title>
+    <style type="text/css">
+    body{
+    	background-color: pink;
+    }
+    p1 {
+      font-family: Courier New;
+      }
+    #form1layout label{
+      display: block;
+      float: left;
+      margin-bottom: 10px;
+      padding right:10px;
+      width:150px;
+      }
+    </style>
+    <script>
+    function validateForm() {
+    var nama = document.forms["myForm"]["name"].value;
+    var lahir = document.forms["myForm"]["tgllahir"].value;
+    if (nama != "" && lahir !="") {
+        return true;
+    }else{
+        alert('Nama dan Tanggal Lahir tidak boleh kosong.');
+    }
+}
+</script>
+  </head>
+  
+  
+  <body><p1><center><h1>FORM REGISTRASI</h1></center></br></br>
+  <form name="myForm" onsubmit="return validateForm()" method="post">
+    <div id = "form1layout">
+      <label>Nama : </label><input type="text" name="firstname"><br><br>
+      <label>Jenis Kelamin : </label><input type="radio" name="gender" value="laki-laki" checked> Laki-laki <input type="radio" name="gender" value="perempuan"> Perempuan<br><br>
+      <label>Tanggal Lahir : </label><input type="date" name="tgllahir"><br><br>
+      <label>Alamat : </label><textarea name="address" rows="5"></textarea><br><br>
+      <input type="submit" value="SUBMIT" style="background:violet">
+</div>
+</form>
+</p1>
+</body>
+</html>
